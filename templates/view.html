@@ -1,0 +1,9 @@
+{{ template "base" . }}
+{{ define "title" }}{{.Title}}{{end}}
+{{ define "view" }}
+<div class="container">
+<h1>{{.Title}}</h1>
+<p><a href="/edit/{{.Title}}">edit</a></p>
+<div>{{printf "%s" .Body}}</div>
+</div>
+{{ end }}
