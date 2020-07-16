@@ -1,0 +1,2 @@
+### Purpose
+To learn golang through development of web applications. Following the article [here](https://golang.org/doc/articles/wiki/), I (hopefully) plan on adding more to this as time goes on through extension
