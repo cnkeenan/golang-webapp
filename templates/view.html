@@ -1,9 +1,20 @@
 {{ template "base" . }}
-{{ define "title" }}{{.Title}}{{end}}
+{{ define "title" }}Posts{{end}}
 {{ define "view" }}
+
+
+
 <div class="container">
-<h1>{{.Title}}</h1>
-<p><a href="/edit/{{.Title}}">edit</a></p>
-<div>{{printf "%s" .Body}}</div>
+    <div class="card">
+        <div class="card-header text-uppercase">{{.Title}}</div>
+        <div class="card-body">
+            <p class="card-text">{{printf "%s" .Body}}</p>
+        </div>
+        <div class="card-footer text-muted">
+            <a href="/edit/{{.Title}}" class="btn btn-primary">Edit</a>
+        </div>
+    </div>
+    <br/><br/>
 </div>
+
 {{ end }}

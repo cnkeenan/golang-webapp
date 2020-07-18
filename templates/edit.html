@@ -1,17 +1,17 @@
 {{ template "base" . }}
-{{ define "title" }}Edit {{.Title}}{{end}}
+{{ define "title" }}Edit{{end}}
 {{ define "edit" }}
 <div class="container">
-<h1>Editing  {{.Title}}</h1>
+    <h1>Editing {{.Title}}</h1>
 
-<form action="/save/{{.Title}}" method="POST">
-<div>
-    <textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea>
+    <form action="/save/{{.Title}}" method="POST">
+        <div class="form-group">
+            <label for="textarea1" class="text-muted">Edit a post</label>
+            <textarea name="body" class="form-control" id="textarea1" rows="20" cols="80">{{ printf "%s" .Body}}</textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Save</button>
+    </form>
 </div>
-<div>
-    <input type="submit" value="Save">
-</div>
-</form>
-</div>
+
 
 {{end}}

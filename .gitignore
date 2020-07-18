@@ -26,4 +26,7 @@
 ## Data folders ##
 ./data/*
 
+*.db
+*.db.*
+
 # End of https://www.toptal.com/developers/gitignore/api/go
